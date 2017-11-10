@@ -48,7 +48,16 @@ public class Player : MonoBehaviour {
 
     void speedDown()
     {
-
+        Debug.Log("Player slow down");
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        //Debug.Log("Player collision");
+        if (collision.gameObject.tag == "obstacle1")
+        {
+            Debug.Log("Player slow down");
+            speedDown();
+        }
     }
 
 
