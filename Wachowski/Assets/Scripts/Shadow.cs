@@ -20,7 +20,7 @@ public class Shadow : MonoBehaviour {
     {
         shadow.transform.Translate(Vector3.right * speed * Time.deltaTime);
 
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             Debug.Log("A");
             pRb.AddForce(transform.forward * force);

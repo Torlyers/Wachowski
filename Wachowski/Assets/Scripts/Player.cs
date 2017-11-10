@@ -23,7 +23,7 @@ public class Player : MonoBehaviour {
     {
         player.transform.Translate(Vector3.right * speed * Time.deltaTime);
 
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.UpArrow) && pRb.velocity.y == 0)
         {
             Debug.Log("Space");
             pRb.AddForce(transform.up * force);
@@ -43,7 +43,7 @@ public class Player : MonoBehaviour {
     void changeDir()
     {
         speed *= -1;
-        transform.position *= -1;
+        //transform.position *= -1;
     }
 
     void speedDown()
