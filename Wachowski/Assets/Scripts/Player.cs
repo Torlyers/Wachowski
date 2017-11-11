@@ -11,11 +11,14 @@ public class Player : MonoBehaviour {
 
     private bool isOnGround;
 
+    public static Player Instance;
+
 	// Use this for initialization
 	void Start ()
     {
         pRb = player.GetComponent<Rigidbody>();
         isOnGround = true;
+        Instance = this;
     }
 	
 	// Update is called once per frame
@@ -40,16 +43,20 @@ public class Player : MonoBehaviour {
         }
     }
 
-    void changeDir()
+    public void changeDir()
     {
-        speed *= -1;
-        transform.position *= -1;
+        //speed *= -1;
+        transform.localEulerAngles += new Vector3(0, 180, 0);
     }
 
-    void speedDown()
+    public void accelerate()
     {
-
+        speed *= 2f;
     }
 
+    public void decelerate()
+    {
+        speed *= 0.5f;
+    }
 
 }
