@@ -8,11 +8,13 @@ public class Shadow : MonoBehaviour {
     public float speed;
     private Rigidbody pRb;
     public float force;
+    public float gravity;
 
     // Use this for initialization
     void Start()
     {
         pRb = shadow.GetComponent<Rigidbody>();
+        
     }
 
     // Update is called once per frame
@@ -20,7 +22,7 @@ public class Shadow : MonoBehaviour {
     {
         shadow.transform.Translate(Vector3.right * speed * Time.deltaTime);
 
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             Debug.Log("A");
             pRb.AddForce(transform.forward * force);
@@ -29,11 +31,24 @@ public class Shadow : MonoBehaviour {
 
     void FixedUpdate()
     {
-        pRb.AddForce(-transform.forward * 9.81f);
+        pRb.AddForce(-transform.forward * 9.81f * gravity);
 
         //var grav = new Vector3(0, 0, 9.81f);
         //var pos = shadow.transform.position;
         //pos += grav * Time.fixedDeltaTime;
         //shadow.transform.position = pos;
+    }
+    void speedDown()
+    {
+        Debug.Log("Shadow slow down");
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+       // Debug.Log("Shadow collision");
+        if (collision.gameObject.tag == "obstacle2")
+        {
+            Debug.Log("Shadow slow down");
+            speedDown();
+        }
     }
 }
