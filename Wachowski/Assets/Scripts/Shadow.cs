@@ -24,14 +24,14 @@ public class Shadow : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            Debug.Log("A");
-            pRb.AddForce(transform.forward * force);
+            Debug.Log("DownArrow");
+            pRb.AddForce(transform.up * force);
         }
     }
 
     void FixedUpdate()
     {
-        pRb.AddForce(-transform.forward * 9.81f * gravity);
+        //pRb.AddForce(-transform.forward * 9.81f * gravity);
 
         //var grav = new Vector3(0, 0, 9.81f);
         //var pos = shadow.transform.position;
