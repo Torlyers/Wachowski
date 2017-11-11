@@ -10,10 +10,13 @@ public class Shadow : MonoBehaviour {
     public float force;
     public float gravity;
 
+    public static Shadow Instance;
+
     // Use this for initialization
     void Start()
     {
         pRb = shadow.GetComponent<Rigidbody>();
+        Instance = this;
         
     }
 
@@ -31,7 +34,7 @@ public class Shadow : MonoBehaviour {
 
     void FixedUpdate()
     {
-        pRb.AddForce(-transform.forward * 9.81f * gravity);
+        pRb.AddForce(-transform.forward * 9.81f);
 
         //var grav = new Vector3(0, 0, 9.81f);
         //var pos = shadow.transform.position;
@@ -42,13 +45,29 @@ public class Shadow : MonoBehaviour {
     {
         Debug.Log("Shadow slow down");
     }
-    private void OnCollisionEnter(Collision collision)
+
+    public void changeDir()
     {
-       // Debug.Log("Shadow collision");
-        if (collision.gameObject.tag == "obstacle2")
-        {
-            Debug.Log("Shadow slow down");
-            speedDown();
-        }
+        //speed *= -1;
+        transform.localEulerAngles += new Vector3(0, 180, 0);
     }
+
+    public void accelerate()
+    {
+        speed *= 2f;
+    }
+
+    public void decelerate()
+    {
+        speed *= 0.5f;
+    }
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //   // Debug.Log("Shadow collision");
+    //    if (collision.gameObject.tag == "obstacle2")
+    //    {
+    //        Debug.Log("Shadow slow down");
+    //        speedDown();
+    //    }
+    //}
 }

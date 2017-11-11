@@ -19,6 +19,10 @@ public class Obstacle : MonoBehaviour {
         {
             Player.Instance.decelerate();
         }
+        else if(other.gameObject.tag == "Shadow")
+        {
+            Shadow.Instance.decelerate();
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -26,6 +30,10 @@ public class Obstacle : MonoBehaviour {
         if (other.gameObject.tag == "Player")
         {
             Player.Instance.accelerate();
+        }
+        else if(other.gameObject.tag == "Shadow")
+        {
+            Shadow.Instance.decelerate();
         }
     }
 }
