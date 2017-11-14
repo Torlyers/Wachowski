@@ -18,6 +18,7 @@ public class Obstacle : MonoBehaviour {
         if(other.gameObject.tag == "Player")
         {
             Player.Instance.decelerate();
+            Player.Instance.switchState(Player.state.trip);
         }
     }
 
@@ -26,6 +27,7 @@ public class Obstacle : MonoBehaviour {
         if (other.gameObject.tag == "Player")
         {
             Player.Instance.accelerate();
+            Player.Instance.switchState(Player.state.run);
         }
     }
 }

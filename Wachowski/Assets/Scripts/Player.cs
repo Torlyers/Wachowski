@@ -93,7 +93,7 @@ public class Player : MonoBehaviour {
         trip
     }
 
-   private void switchState(state s)
+   public void switchState(state s)
    {
         playerState = s;
         isLastStateDone = true;
