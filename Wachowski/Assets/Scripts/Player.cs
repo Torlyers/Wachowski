@@ -13,7 +13,7 @@ public class Player : MonoBehaviour {
     public bool isLastStateDone = false;
 
 
-    private bool isOnGround;
+    public bool isOnGround;
 
     public static Player Instance;
 
@@ -33,26 +33,17 @@ public class Player : MonoBehaviour {
 
 	void Update ()
     {
-        player.transform.Translate(Vector3.right * speed * Time.deltaTime);
-
-        if (Input.GetKeyDown(KeyCode.UpArrow) && isOnGround)
-        {
-            Debug.Log("Space");
-            jump();            
-        }
-
-        if(Input.GetKeyDown(KeyCode.S))
-        {
-            changeDir();
-        }        
+        player.transform.Translate(Vector3.right * speed * Time.deltaTime);       
     }
 
     public void jump()
     {
-        pRb.AddForce(transform.up * force);
-        isOnGround = false;
-        switchState(state.jump);
-
+        if (isOnGround)
+        {
+            pRb.AddForce(transform.up * force);
+            isOnGround = false;
+            switchState(state.jump);
+        }
     }
 
     public void changeDir()
@@ -79,7 +70,7 @@ public class Player : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "collider" )
+        if(collision.gameObject.tag == "collider" && !isOnGround)
         {
             isOnGround = true;
             switchState(state.run);

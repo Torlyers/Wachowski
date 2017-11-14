@@ -144,7 +144,7 @@ PlayerSettings:
     Android: com.Team6.Wachowski
   buildNumber: {}
   AndroidBundleVersionCode: 1
-  AndroidMinSdkVersion: 16
+  AndroidMinSdkVersion: 21
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
   aotOptions: 
