@@ -9,9 +9,10 @@ public class Player : MonoBehaviour {
     private Rigidbody pRb;
     public float force;
 
-    private int offset = 0;
+    //private int offset = 0;
 
     public state playerState;
+    public bool isLastStateDone = false;
 
 
     private bool isOnGround;
@@ -55,7 +56,8 @@ public class Player : MonoBehaviour {
     {
         pRb.AddForce(transform.up * force);
         isOnGround = false;
-        playerState = state.jump;
+        switchState(state.jump);
+
     }
 
     public void changeDir()
@@ -98,7 +100,7 @@ public class Player : MonoBehaviour {
         if(collision.gameObject.tag == "collider" )
         {
             isOnGround = true;
-            playerState = state.run;
+            switchState(state.run);
         }
     }
 
@@ -109,6 +111,11 @@ public class Player : MonoBehaviour {
         trip
     }
 
+   private void switchState(state s)
+   {
+        playerState = s;
+        isLastStateDone = true;
+   }
 
 
 }

@@ -17,20 +17,25 @@ public class AnimationCtrlSprite : MonoBehaviour {
     public float Timer;
     public float FrameInterval = .04f;
 
+    
+
 
     // Use this for initialization
     void Start ()
     {
+        animes = new List<Sprite[]>();
+
         //render = gameObject.GetComponent<SpriteRenderer>();
-        for(int i = 0; i < animeName.Count; i++)
-        {
-            animes[i] = Resources.LoadAll<Sprite>(SpriteName);
+        for (int i = 0; i < animeName.Count; i++)
+        {            
+            var newAnime = Resources.LoadAll<Sprite>(animeName[i]);
+            animes.Add(newAnime);
             //animeDic.Add(i, animes[i]);
         }
 
-    }
-	
-	
+        curAnime = animes[0];
+
+    }	
 
 
     int frameCn = 0;
@@ -38,17 +43,26 @@ public class AnimationCtrlSprite : MonoBehaviour {
     {
 
         //curAnime = animeDic[Player.playerState];
-        switch(Player.Instance.playerState)
+        if (Player.Instance.isLastStateDone)
         {
-            case Player.state.run:
-                curAnime = animes[0];
-                break;
-            case Player.state.jump:
-                curAnime = animes[1];
-                break;
-            case Player.state.trip:
-                curAnime = animes[2];
-                break;
+            switch (Player.Instance.playerState)
+            {
+                case Player.state.run:
+                    FrameInterval = 0.04f;
+                    curAnime = animes[0];
+                    Player.Instance.isLastStateDone = false;
+                    break;
+                case Player.state.jump:
+                    FrameInterval = 0.1f;
+                    curAnime = animes[1];
+                    Player.Instance.isLastStateDone = false;
+                    break;
+                case Player.state.trip:
+                    curAnime = animes[2];
+                    Player.Instance.isLastStateDone = false;
+                    break;
+            }
+            frameCn = 0;
         }
 
         Timer += Time.fixedDeltaTime;
