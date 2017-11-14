@@ -33,18 +33,7 @@ public class Player : MonoBehaviour {
 
 	void Update ()
     {
-        player.transform.Translate(Vector3.right * speed * Time.deltaTime);
-
-        if (Input.GetKeyDown(KeyCode.UpArrow) && isOnGround)
-        {
-            Debug.Log("Space");
-            jump();            
-        }
-
-        if(Input.GetKeyDown(KeyCode.S))
-        {
-            changeDir();
-        }        
+        player.transform.Translate(Vector3.right * speed * Time.deltaTime);       
     }
 
     public void jump()
