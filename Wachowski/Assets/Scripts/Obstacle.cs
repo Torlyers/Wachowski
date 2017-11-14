@@ -27,8 +27,7 @@ public class Obstacle : MonoBehaviour {
         if (other.gameObject.tag == "Player")
         {
             Player.Instance.accelerate();
-            if(Player.Instance.isOnGround)
-                Player.Instance.switchState(Player.state.run);
+            Player.Instance.switchState(Player.state.run);
         }
     }
 }
