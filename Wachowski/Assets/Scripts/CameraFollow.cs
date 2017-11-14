@@ -10,7 +10,7 @@ public class CameraFollow : MonoBehaviour
 
     void Start()
     {
-        speed = 5.0f;
+        speed = 7.0f;
     }
 
     void Update()
