@@ -6,6 +6,8 @@ using UnityEngine.Sprites;
 public class AnimationCtrlSprite : MonoBehaviour {
 
 
+    public Player player;
+
     public List<string> animeName;
     public List<Sprite[]> animes;
 
@@ -35,23 +37,23 @@ public class AnimationCtrlSprite : MonoBehaviour {
     private void FixedUpdate()
     {
 
-        if (Player.Instance.isLastStateDone)
+        if (player.isLastStateDone)
         {
             switch (Player.Instance.playerState)
             {
                 case Player.state.run:
                     FrameInterval = 0.04f;
                     curAnime = animes[0];
-                    Player.Instance.isLastStateDone = false;
+                    player.isLastStateDone = false;
                     break;
                 case Player.state.jump:
                     FrameInterval = 0.1f;
                     curAnime = animes[1];
-                    Player.Instance.isLastStateDone = false;
+                    player.isLastStateDone = false;
                     break;
                 case Player.state.trip:
                     curAnime = animes[2];
-                    Player.Instance.isLastStateDone = false;
+                    player.isLastStateDone = false;
                     break;
             }
             frameCn = 0;

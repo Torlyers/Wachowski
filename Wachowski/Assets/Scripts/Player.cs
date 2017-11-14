@@ -37,11 +37,6 @@ public class Player : MonoBehaviour {
             jump();            
         }
 
-        if(Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
-        {
-            pRb.AddForce(transform.up * force);
-        }
-
         if(Input.GetKeyDown(KeyCode.S))
         {
             changeDir();
