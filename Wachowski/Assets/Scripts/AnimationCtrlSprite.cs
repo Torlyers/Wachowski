@@ -47,7 +47,7 @@ public class AnimationCtrlSprite : MonoBehaviour {
                     player.isLastStateDone = false;
                     break;
                 case Player.state.jump:
-                    FrameInterval = 0.1f;
+                    FrameInterval = 0.12f;
                     curAnime = animes[1];
                     player.isLastStateDone = false;
                     break;
