@@ -5,7 +5,7 @@ using UnityEngine;
 public class SineObstacleMovement : MonoBehaviour {
 
     public GameObject[] obstacleList = new GameObject[5];
-    public Vector3[] obstaclePosition = new Vector3[5];
+    private Vector3[] obstaclePosition = new Vector3[5];
     
     // Use this for initialization
 	void Start () {
@@ -21,7 +21,7 @@ public class SineObstacleMovement : MonoBehaviour {
 
         for(int i = 0; i<5;i++)
         {
-            obstacleList[i].transform.position = obstaclePosition[i] + new Vector3(Mathf.Sin(Time.time*2), 0f, 0f);
+            obstacleList[i].transform.position = obstaclePosition[i] + new Vector3(0f, 0f, Mathf.Sin(Time.time * 5));
         }
 	}
 }
