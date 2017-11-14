@@ -6,7 +6,6 @@ public class CameraFollow : MonoBehaviour
 {
 
     public GameObject objectToFollow;
-    private float offset;
     public float speed;
 
     void Start()
@@ -20,11 +19,11 @@ public class CameraFollow : MonoBehaviour
 
         if (objectToFollow.transform.eulerAngles.y > -1f && objectToFollow.transform.eulerAngles.y < 1f)
         {
-            speed = 5.0f;
+            speed = Mathf.Abs(speed);
         }
         else
         {
-            speed = -5.0f;
+            speed = -Mathf.Abs(speed);
         }
 
         if(Mathf.Abs(gameObject.transform.position.x - objectToFollow.transform.position.x) > 10f)

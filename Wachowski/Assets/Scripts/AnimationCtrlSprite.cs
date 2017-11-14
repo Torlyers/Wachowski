@@ -9,18 +9,11 @@ public class AnimationCtrlSprite : MonoBehaviour {
     public List<string> animeName;
     public List<Sprite[]> animes;
 
-    //private Dictionary<int, Sprite[]> animeDic;
-    public string SpriteName = "wach_run_sketch";
-
     Sprite[] curAnime;
     public SpriteRenderer render;
     public float Timer;
-    public float FrameInterval = .04f;
+    public float FrameInterval = .04f;    
 
-    
-
-
-    // Use this for initialization
     void Start ()
     {
         animes = new List<Sprite[]>();
@@ -42,7 +35,6 @@ public class AnimationCtrlSprite : MonoBehaviour {
     private void FixedUpdate()
     {
 
-        //curAnime = animeDic[Player.playerState];
         if (Player.Instance.isLastStateDone)
         {
             switch (Player.Instance.playerState)

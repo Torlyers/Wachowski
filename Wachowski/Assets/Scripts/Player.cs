@@ -9,8 +9,6 @@ public class Player : MonoBehaviour {
     private Rigidbody pRb;
     public float force;
 
-    //private int offset = 0;
-
     public state playerState;
     public bool isLastStateDone = false;
 
@@ -19,7 +17,7 @@ public class Player : MonoBehaviour {
 
     public static Player Instance;
 
-	// Use this for initialization
+
 	void Start ()
     {
         pRb = player.GetComponent<Rigidbody>();
@@ -28,7 +26,7 @@ public class Player : MonoBehaviour {
         playerState = state.run;
     }
 	
-	// Update is called once per frame
+
 	void Update ()
     {
         player.transform.Translate(Vector3.right * speed * Time.deltaTime);
@@ -73,7 +71,7 @@ public class Player : MonoBehaviour {
 
     public void decelerate()
     {
-        Debug.Log("de");
+        //Debug.Log("de");
         speed *= 0.5f;
     }
 
@@ -82,19 +80,6 @@ public class Player : MonoBehaviour {
 
     }
 
-    //void speedDown()
-    //{
-    //    Debug.Log("Player slow down");
-    //}
-    //private void OnTriggerEnter(Collider collision)
-    //{
-    //    
-    //    if (collision.gameObject.tag == "obstacle1")
-    //    {
-            
-    //        speedDown();
-    //    }
-    //}
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.tag == "collider" )
