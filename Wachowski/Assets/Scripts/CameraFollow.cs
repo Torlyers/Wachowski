@@ -6,22 +6,39 @@ public class CameraFollow : MonoBehaviour
 {
 
     public GameObject objectToFollow;
-
-    public float speed = 2.0f;
+    private float offset;
+    public float speed;
 
     void Start()
     {
-
+        speed = 5.0f;
     }
 
     void Update()
     {
-        float interpolation = speed * Time.deltaTime;
+        gameObject.transform.Translate(Vector3.right * speed * Time.deltaTime);
 
-        Vector3 position = this.transform.position;
+        if (objectToFollow.transform.eulerAngles.y > -1f && objectToFollow.transform.eulerAngles.y < 1f)
+        {
+            speed = 5.0f;
+        }
+        else
+        {
+            speed = -5.0f;
+        }
+
+        if(Mathf.Abs(gameObject.transform.position.x - objectToFollow.transform.position.x) > 10f)
+        {
+            Player.Instance.dead();
+        }
+
+       
+        //float interpolation = speed * Time.deltaTime;
+
+        //Vector3 position = this.transform.position;
         //position.y = Mathf.Lerp(this.transform.position.y, objectToFollow.transform.position.y, interpolation);
-        position.x = Mathf.Lerp(this.transform.position.x, objectToFollow.transform.position.x, interpolation);
+        //position.x = objectToFollow.transform.position.x + offset;
         //position.x += 0.2f;
-        this.transform.position = position;
+       // this.transform.position = position;
     }
 }

@@ -9,6 +9,11 @@ public class Player : MonoBehaviour {
     private Rigidbody pRb;
     public float force;
 
+    private int offset = 0;
+
+    public state playerState;
+
+
     private bool isOnGround;
 
     public static Player Instance;
@@ -19,6 +24,7 @@ public class Player : MonoBehaviour {
         pRb = player.GetComponent<Rigidbody>();
         isOnGround = true;
         Instance = this;
+        playerState = state.run;
     }
 	
 	// Update is called once per frame
@@ -29,8 +35,7 @@ public class Player : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.UpArrow) && isOnGround)
         {
             Debug.Log("Space");
-            pRb.AddForce(transform.up * force);
-            isOnGround = false;
+            jump();            
         }
 
         if(Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
@@ -42,12 +47,21 @@ public class Player : MonoBehaviour {
         {
             changeDir();
         }
+
+        
+    }
+
+    public void jump()
+    {
+        pRb.AddForce(transform.up * force);
+        isOnGround = false;
+        playerState = state.jump;
     }
 
     public void changeDir()
     {
         //speed *= -1;
-        transform.localEulerAngles += new Vector3(0, 180, 0);
+        transform.eulerAngles += new Vector3(0, 180, 0);
     }
 
     public void accelerate()
@@ -57,27 +71,44 @@ public class Player : MonoBehaviour {
 
     public void decelerate()
     {
+        Debug.Log("de");
         speed *= 0.5f;
     }
-    void speedDown()
+
+    public void dead()
     {
-        Debug.Log("Player slow down");
+
     }
-    private void OnTriggerEnter(Collider collision)
-    {
-        ;
-        if (collision.gameObject.tag == "obstacle1")
-        {
+
+    //void speedDown()
+    //{
+    //    Debug.Log("Player slow down");
+    //}
+    //private void OnTriggerEnter(Collider collision)
+    //{
+    //    
+    //    if (collision.gameObject.tag == "obstacle1")
+    //    {
             
-            speedDown();
-        }
-    }
+    //        speedDown();
+    //    }
+    //}
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.tag == "collider" )
         {
             isOnGround = true;
+            playerState = state.run;
         }
     }
+
+    public enum state
+    {
+        run,
+        jump,
+        trip
+    }
+
+
 
 }

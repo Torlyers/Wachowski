@@ -1,19 +1,32 @@
 fileFormatVersion: 2
-guid: 38e4da580c13d164e911b82ac776ff9d
-timeCreated: 1510624484
+guid: f52c031cc5b6b174c89cc69e9a9b606c
+timeCreated: 1510629966
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: wach_jump_sketch_0
-    21300002: wach_jump_sketch_1
-    21300004: wach_jump_sketch_2
-    21300006: wach_jump_sketch_3
-    21300008: wach_jump_sketch_4
-    21300010: wach_jump_sketch_5
-    21300012: wach_jump_sketch_6
-    21300014: wach_jump_sketch_7
-    21300016: wach_jump_sketch_8
-    21300018: wach_jump_sketch_9
+    21300000: wach_tripp_sketch_0
+    21300002: wach_tripp_sketch_1
+    21300004: wach_tripp_sketch_2
+    21300006: wach_tripp_sketch_3
+    21300008: wach_tripp_sketch_4
+    21300010: wach_tripp_sketch_5
+    21300012: wach_tripp_sketch_6
+    21300014: wach_tripp_sketch_7
+    21300016: wach_tripp_sketch_8
+    21300018: wach_tripp_sketch_9
+    21300020: wach_tripp_sketch_10
+    21300022: wach_tripp_sketch_11
+    21300024: wach_tripp_sketch_12
+    21300026: wach_tripp_sketch_13
+    21300028: wach_tripp_sketch_14
+    21300030: wach_tripp_sketch_15
+    21300032: wach_tripp_sketch_16
+    21300034: wach_tripp_sketch_17
+    21300036: wach_tripp_sketch_18
+    21300038: wach_tripp_sketch_19
+    21300040: wach_tripp_sketch_20
+    21300042: wach_tripp_sketch_21
+    21300044: wach_tripp_sketch_22
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -93,40 +106,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: wach_jump_sketch_0
+      name: wach_tripp_sketch_0
       rect:
         serializedVersion: 2
-        x: 658
-        y: 423
-        width: 4
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: wach_jump_sketch_1
-      rect:
-        serializedVersion: 2
-        x: 664
-        y: 255
-        width: 188
-        height: 238
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: wach_jump_sketch_2
-      rect:
-        serializedVersion: 2
-        x: 1696
+        x: 0
         y: 0
-        width: 250
+        width: 512
         height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -135,97 +120,125 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: wach_jump_sketch_3
+      name: wach_tripp_sketch_1
       rect:
         serializedVersion: 2
-        x: 2218
-        y: 190
-        width: 146
-        height: 322
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: wach_jump_sketch_4
-      rect:
-        serializedVersion: 2
-        x: 127
-        y: 1
-        width: 226
-        height: 373
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: wach_jump_sketch_5
-      rect:
-        serializedVersion: 2
-        x: 655
-        y: 324
-        width: 11
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: wach_jump_sketch_6
-      rect:
-        serializedVersion: 2
-        x: 1127
-        y: 331
-        width: 11
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: wach_jump_sketch_7
-      rect:
-        serializedVersion: 2
-        x: 1136
-        y: 319
-        width: 26
-        height: 23
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: wach_jump_sketch_8
-      rect:
-        serializedVersion: 2
-        x: 1181
-        y: 168
-        width: 183
-        height: 251
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: wach_jump_sketch_9
-      rect:
-        serializedVersion: 2
-        x: 2182
+        x: 512
         y: 0
-        width: 259
-        height: 188
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: wach_tripp_sketch_2
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: wach_tripp_sketch_3
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: wach_tripp_sketch_4
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: wach_tripp_sketch_5
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: wach_tripp_sketch_6
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: wach_tripp_sketch_7
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: wach_tripp_sketch_8
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: wach_tripp_sketch_9
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
