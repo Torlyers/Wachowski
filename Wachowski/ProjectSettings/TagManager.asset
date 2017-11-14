@@ -6,6 +6,7 @@ TagManager:
   tags:
   - obstacle1
   - obstacle2
+  - collider
   layers:
   - Default
   - TransparentFX
