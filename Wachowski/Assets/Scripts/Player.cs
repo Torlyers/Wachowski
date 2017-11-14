@@ -17,12 +17,16 @@ public class Player : MonoBehaviour {
 
     public static Player Instance;
 
+    private void Awake()
+    {
+        Instance = this;
+    }
 
-	void Start ()
+
+    void Start ()
     {
         pRb = player.GetComponent<Rigidbody>();
-        isOnGround = true;
-        Instance = this;
+        isOnGround = true;        
         playerState = state.run;
     }
 	
@@ -40,9 +44,7 @@ public class Player : MonoBehaviour {
         if(Input.GetKeyDown(KeyCode.S))
         {
             changeDir();
-        }
-
-        
+        }        
     }
 
     public void jump()
