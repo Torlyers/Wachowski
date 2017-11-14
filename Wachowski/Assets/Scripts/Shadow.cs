@@ -9,12 +9,13 @@ public class Shadow : MonoBehaviour {
     private Rigidbody pRb;
     public float force;
     public float gravity;
+    private bool isOnGround;
 
     // Use this for initialization
     void Start()
     {
         pRb = shadow.GetComponent<Rigidbody>();
-        
+        isOnGround = true;
     }
 
     // Update is called once per frame
@@ -22,11 +23,13 @@ public class Shadow : MonoBehaviour {
     {
         shadow.transform.Translate(Vector3.right * speed * Time.deltaTime);
 
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKeyDown(KeyCode.DownArrow) && isOnGround)
         {
             Debug.Log("DownArrow");
             pRb.AddForce(transform.up * force);
+            isOnGround = false;
         }
+        
     }
 
     void FixedUpdate()
@@ -42,13 +45,20 @@ public class Shadow : MonoBehaviour {
     {
         Debug.Log("Shadow slow down");
     }
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
        // Debug.Log("Shadow collision");
         if (collision.gameObject.tag == "obstacle2")
         {
-            Debug.Log("Shadow slow down");
+            //Debug.Log("Shadow slow down");
             speedDown();
+        }
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "collider")
+        {
+            isOnGround = true;
         }
     }
 }

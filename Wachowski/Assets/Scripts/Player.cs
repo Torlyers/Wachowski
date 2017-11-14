@@ -26,10 +26,11 @@ public class Player : MonoBehaviour {
     {
         player.transform.Translate(Vector3.right * speed * Time.deltaTime);
 
-        if(Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.UpArrow) && isOnGround)
         {
             Debug.Log("Space");
             pRb.AddForce(transform.up * force);
+            isOnGround = false;
         }
 
         if(Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
@@ -57,6 +58,26 @@ public class Player : MonoBehaviour {
     public void decelerate()
     {
         speed *= 0.5f;
+    }
+    void speedDown()
+    {
+        Debug.Log("Player slow down");
+    }
+    private void OnTriggerEnter(Collider collision)
+    {
+        ;
+        if (collision.gameObject.tag == "obstacle1")
+        {
+            
+            speedDown();
+        }
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "collider" )
+        {
+            isOnGround = true;
+        }
     }
 
 }
