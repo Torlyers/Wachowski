@@ -1,14 +1,19 @@
 fileFormatVersion: 2
-guid: b3e5719c2a8f463459eed474268fd085
-timeCreated: 1510724734
+guid: fc9cc1ec73c07a14f93b8ab836acbaf2
+timeCreated: 1510724725
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: r_wach_jump_0
-    21300002: r_wach_jump_1
-    21300004: r_wach_jump_2
-    21300006: r_wach_jump_3
-    21300008: r_wach_jump_4
+    21300000: r_shadow_tripp_0
+    21300002: r_shadow_tripp_1
+    21300004: r_shadow_tripp_2
+    21300006: r_shadow_tripp_3
+    21300008: r_shadow_tripp_4
+    21300010: r_shadow_tripp_5
+    21300012: r_shadow_tripp_6
+    21300014: r_shadow_tripp_7
+    21300016: r_shadow_tripp_8
+    21300018: r_shadow_tripp_9
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -88,7 +93,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: r_wach_jump_0
+      name: r_shadow_tripp_0
       rect:
         serializedVersion: 2
         x: 0
@@ -102,7 +107,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: r_wach_jump_1
+      name: r_shadow_tripp_1
       rect:
         serializedVersion: 2
         x: 512
@@ -116,7 +121,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: r_wach_jump_2
+      name: r_shadow_tripp_2
       rect:
         serializedVersion: 2
         x: 1024
@@ -130,7 +135,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: r_wach_jump_3
+      name: r_shadow_tripp_3
       rect:
         serializedVersion: 2
         x: 1536
@@ -144,10 +149,80 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: r_wach_jump_4
+      name: r_shadow_tripp_4
       rect:
         serializedVersion: 2
         x: 2048
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: r_shadow_tripp_5
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: r_shadow_tripp_6
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: r_shadow_tripp_7
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: r_shadow_tripp_8
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: r_shadow_tripp_9
+      rect:
+        serializedVersion: 2
+        x: 4608
         y: 0
         width: 512
         height: 512
