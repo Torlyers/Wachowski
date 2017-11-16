@@ -1,19 +1,25 @@
 fileFormatVersion: 2
-guid: ae9e5db528369cd49ba8eafe353360b0
-timeCreated: 1510724756
+guid: f32ec2c4f30bf824e913b14ce27cc8ad
+timeCreated: 1510809118
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: r_wach_tripp_0
-    21300002: r_wach_tripp_1
-    21300004: r_wach_tripp_2
-    21300006: r_wach_tripp_3
-    21300008: r_wach_tripp_4
-    21300010: r_wach_tripp_5
-    21300012: r_wach_tripp_6
-    21300014: r_wach_tripp_7
-    21300016: r_wach_tripp_8
-    21300018: r_wach_tripp_9
+    21300000: r_wach_run_2l_0
+    21300002: r_wach_run_2l_1
+    21300004: r_wach_run_2l_2
+    21300006: r_wach_run_2l_3
+    21300008: r_wach_run_2l_4
+    21300010: r_wach_run_2l_5
+    21300012: r_wach_run_2l_6
+    21300014: r_wach_run_2l_7
+    21300016: r_wach_run_2l_8
+    21300018: r_wach_run_2l_9
+    21300020: r_wach_run_2l_10
+    21300022: r_wach_run_2l_11
+    21300024: r_wach_run_2l_12
+    21300026: r_wach_run_2l_13
+    21300028: r_wach_run_2l_14
+    21300030: r_wach_run_2l_15
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -68,7 +74,7 @@ TextureImporter:
   - buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -76,15 +82,15 @@ TextureImporter:
   - buildTarget: Standalone
     maxTextureSize: 2048
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
   - buildTarget: Android
     maxTextureSize: 2048
-    textureFormat: 4
-    textureCompression: 0
+    textureFormat: -1
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -93,7 +99,119 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: r_wach_tripp_0
+      name: r_wach_run_2l_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: r_wach_run_2l_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: r_wach_run_2l_2
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: r_wach_run_2l_3
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: r_wach_run_2l_4
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: r_wach_run_2l_5
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: r_wach_run_2l_6
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: r_wach_run_2l_7
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: r_wach_run_2l_8
       rect:
         serializedVersion: 2
         x: 0
@@ -107,7 +225,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: r_wach_tripp_1
+      name: r_wach_run_2l_9
       rect:
         serializedVersion: 2
         x: 512
@@ -121,7 +239,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: r_wach_tripp_2
+      name: r_wach_run_2l_10
       rect:
         serializedVersion: 2
         x: 1024
@@ -135,7 +253,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: r_wach_tripp_3
+      name: r_wach_run_2l_11
       rect:
         serializedVersion: 2
         x: 1536
@@ -149,7 +267,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: r_wach_tripp_4
+      name: r_wach_run_2l_12
       rect:
         serializedVersion: 2
         x: 2048
@@ -163,7 +281,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: r_wach_tripp_5
+      name: r_wach_run_2l_13
       rect:
         serializedVersion: 2
         x: 2560
@@ -177,7 +295,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: r_wach_tripp_6
+      name: r_wach_run_2l_14
       rect:
         serializedVersion: 2
         x: 3072
@@ -191,38 +309,10 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: r_wach_tripp_7
+      name: r_wach_run_2l_15
       rect:
         serializedVersion: 2
         x: 3584
-        y: 0
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: r_wach_tripp_8
-      rect:
-        serializedVersion: 2
-        x: 4096
-        y: 0
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: r_wach_tripp_9
-      rect:
-        serializedVersion: 2
-        x: 4608
         y: 0
         width: 512
         height: 512
