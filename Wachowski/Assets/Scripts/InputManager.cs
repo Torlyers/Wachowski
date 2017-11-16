@@ -6,8 +6,8 @@ public class InputManager : MonoBehaviour {
 
     public static InputManager Instance;
 
-    public Player player;
-    public Shadow shadow;
+    Player player;
+    Player shadow;
 
     private void Awake()
     {
@@ -17,7 +17,8 @@ public class InputManager : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
-		
+        player = GameMain.Instance.player;
+        shadow = GameMain.Instance.shadow;
 	}
 	
 	// Update is called once per frame

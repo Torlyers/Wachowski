@@ -9,6 +9,7 @@ public class Player : MonoBehaviour {
     public float speed;
     private Rigidbody pRb;
     public float force;
+    private Animator animator;
 
     public state playerState;
     public bool isLastStateDone = false;
@@ -29,12 +30,35 @@ public class Player : MonoBehaviour {
         pRb = player.GetComponent<Rigidbody>();
         isOnGround = true;        
         playerState = state.run;
+        animator = GetComponent<Animator>();
     }
 	
 
 	void Update ()
     {
-        player.transform.Translate(Vector3.right * speed * Time.deltaTime);       
+           
+    }
+
+    private void FixedUpdate()
+    {
+        player.transform.Translate(Vector3.right * speed * Time.deltaTime);
+
+        if (isLastStateDone)
+        {
+            switch (playerState)
+            {
+                case state.run:
+                    isLastStateDone = false;
+                    break;
+                case state.jump:
+                    isLastStateDone = false;
+                    break;
+                case state.trip:
+                    animator.SetTrigger("trip");
+                    isLastStateDone = false;
+                    break;
+            }
+        }
     }
 
     public void jump()
@@ -44,7 +68,10 @@ public class Player : MonoBehaviour {
             pRb.AddForce(transform.up * force);
             isOnGround = false;
             switchState(state.jump);
+            animator.SetTrigger("jump");
         }
+
+        
     }
 
     public void changeDir()

@@ -2,10 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Obstacle : MonoBehaviour {    
+public class Obstacle : MonoBehaviour {
 
-	void Start () {
-		
+    Player player;
+    Player shadow;
+
+	void Start ()
+    {
+        player = GameMain.Instance.player;
+        shadow = GameMain.Instance.shadow;	
 	}
 	
 	// Update is called once per frame
@@ -17,8 +22,13 @@ public class Obstacle : MonoBehaviour {
     {
         if(other.gameObject.tag == "Player")
         {
-            Player.Instance.decelerate();
-            Player.Instance.switchState(Player.state.trip);
+            player.decelerate();
+            player.switchState(Player.state.trip);
+        }
+        else if(other.gameObject.tag == "Shadow")
+        {
+            shadow.decelerate();
+            shadow.switchState(Player.state.trip);
         }
     }
 
@@ -26,9 +36,15 @@ public class Obstacle : MonoBehaviour {
     {
         if (other.gameObject.tag == "Player")
         {
-            Player.Instance.accelerate();
-            if(Player.Instance.isOnGround)
-                Player.Instance.switchState(Player.state.run);
+            player.accelerate();
+            if(player.isOnGround)
+                player.switchState(Player.state.run);
+        }
+        else if (other.gameObject.tag == "Shadow")
+        {
+            shadow.accelerate();
+            if(shadow.isOnGround)
+                shadow.switchState(Player.state.run);
         }
     }
 }
