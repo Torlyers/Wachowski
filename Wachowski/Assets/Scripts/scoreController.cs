@@ -9,13 +9,13 @@ public class scoreController : MonoBehaviour {
     private int score;
     // Use this for initialization
 	void Start () {
-        GameMain.Instance.score = 0;
-        scoreText.text = "Score: " + GameMain.Instance.score;
+        ScoreBoard.score = 0;
+        scoreText.text = "Score: " + ScoreBoard.score;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        GameMain.Instance.score += 2;
-        scoreText.text = "Score: " + GameMain.Instance.score;
+        ScoreBoard.score += 2;
+        scoreText.text = "Score: " + ScoreBoard.score;
 	}
 }

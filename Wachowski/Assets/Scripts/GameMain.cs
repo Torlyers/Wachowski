@@ -10,7 +10,7 @@ public class GameMain : MonoBehaviour {
     public List<AudioClip> sfx;
 
     public static GameMain Instance;
-    public int score;
+    public  int score;
 
     private void Awake()
     {
