@@ -8,6 +8,7 @@ public class GameMain : MonoBehaviour {
     public Player shadow;
 
     public static GameMain Instance;
+    public int score;
 
     private void Awake()
     {
