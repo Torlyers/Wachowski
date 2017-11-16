@@ -13,7 +13,7 @@ public class CameraFollow : MonoBehaviour
         speed = 10.0f;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         gameObject.transform.Translate(Vector3.right * speed * Time.deltaTime);
 

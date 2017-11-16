@@ -24,6 +24,22 @@ public class InputManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
+        //touchscreen ctrl
+        if(Input.touchCount > 0)
+        {
+
+            foreach(Touch touch in Input.touches)
+            {
+                if (touch.position.y < Screen.height / 2)
+                    player.jump();
+                else
+                    shadow.jump();
+            }
+
+        }
+
+
+        //keyborad ctrl
 		if(Input.GetKeyDown(KeyCode.UpArrow))
         {
             player.jump();
