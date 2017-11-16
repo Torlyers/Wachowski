@@ -7,6 +7,8 @@ public class GameMain : MonoBehaviour {
     public Player player;
     public Player shadow;
 
+    public List<AudioClip> sfx;
+
     public static GameMain Instance;
     public int score;
 
@@ -16,7 +18,8 @@ public class GameMain : MonoBehaviour {
     }
 
     // Use this for initialization
-    void Start () {
+    void Start ()
+    {
 		
 	}
 	

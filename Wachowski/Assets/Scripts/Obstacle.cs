@@ -34,6 +34,9 @@ public class Obstacle : MonoBehaviour {
 
     private void OnTriggerExit(Collider other)
     {
+
+        AudioSource.PlayClipAtPoint(GameMain.Instance.sfx[2], Vector3.zero);
+
         if (other.gameObject.tag == "Player")
         {
             player.accelerate();

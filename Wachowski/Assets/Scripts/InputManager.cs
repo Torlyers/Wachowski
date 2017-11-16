@@ -53,11 +53,14 @@ public class InputManager : MonoBehaviour {
         if(Input.GetKeyDown(KeyCode.A))
         {
             player.changeDir();
+            AudioSource.PlayClipAtPoint(GameMain.Instance.sfx[0], Vector3.zero);
         }
 
         if(Input.GetKeyDown(KeyCode.S))
         {
             shadow.changeDir();
+            AudioSource.PlayClipAtPoint(GameMain.Instance.sfx[1], Vector3.zero);
+
         }
-	}
+    }
 }
